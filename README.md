@@ -1,4 +1,4 @@
-[Go to Page] (https://LDaniels18.github.io)
+[Go to Page](https://LDaniels18.github.io/index)
 
 Ideas:
 - Calendar
