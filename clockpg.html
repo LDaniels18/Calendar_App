@@ -6,11 +6,43 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
 
-        <center><title>Clock</title></center>
+        <title>Clock</title>
 
-        
-        
         <link rel="icon" type="image/x-icon" href="assets/clock.png" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css" rel="stylesheet"></link>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="scripts.js"></script>
+
     </head>
+
+    <body>
+        <div class="container-fluid">
+
+            <center> <h1 class="mt-4">Clock test</h1></center>
+
+            <p>So we may need to import a Global timer sort of thing</p>
+            <p>Timer, Countdown, Alarm, select different countries</p>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-danger">Select</button>
+
+                <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="sr-only">Country</span>
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Pacific Time</a>
+                  <a class="dropdown-item" href="#">Eastern Time</a>
+                  <a class="dropdown-item" href="#">Central Time</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Moon Time</a>
+                </div>
+              </div>
+        </div>
+       
+
+    </body>
 </html>
 
