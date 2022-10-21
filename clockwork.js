@@ -1,9 +1,9 @@
 //clock mechanics
 function moonFunction(){   
-    document.body.style.backgroundColor= "black";
+    document.body.style.backgroundColor= "midnightBlue";
 }
 function sunFunction(){
-    document.body.style.backgroundColor= "yellow";
+    document.body.style.backgroundColor= "Goldenrod";
 }
 
 

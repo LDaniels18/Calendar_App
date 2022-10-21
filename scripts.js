@@ -7,6 +7,7 @@
 // Scripts
 // 
 
+// This will toggle the sidebar --- in f12 the bar will show "sidebar toggled"
 window.addEventListener('DOMContentLoaded', event => {
 
     // Toggle the side navigation
