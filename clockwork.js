@@ -1,10 +1,16 @@
-//clock mechanics
+//Dropdown Option Mechanincs:
+
 function moonFunction(){   
-    document.body.style.backgroundColor= "midnightBlue";
+    document.body.style.backgroundColor= "Black";
 }
 function sunFunction(){
     document.body.style.backgroundColor= "Goldenrod";
 }
+function pacificFunction(){
+    document.body.style.backgroundColor = "midnightBlue"
+}
+
+//clock mechanics: 
 
 // This will draw the clock onto the Clock HTML Page as it is directly linked to the page:
 var canvas = document.getElementById("canvas");
