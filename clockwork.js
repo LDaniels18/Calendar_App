@@ -1,13 +1,13 @@
 //Dropdown Option Mechanincs:
 
 function moonFunction(){   
-    document.body.style.backgroundColor= "Black";
+    document.body.style.backgroundColor= "GoldenRod";
 }
 function sunFunction(){
     document.body.style.backgroundColor= "Goldenrod";
 }
 function pacificFunction(){
-    document.body.style.backgroundColor= "midnightBlue";
+    document.body.style.backgroundColor= "Goldenrod";
 }
 
 //clock mechanics: 
