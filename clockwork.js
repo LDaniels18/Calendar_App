@@ -7,7 +7,7 @@ function sunFunction(){
     document.body.style.backgroundColor= "Goldenrod";
 }
 function pacificFunction(){
-    document.body.style.backgroundColor = "midnightBlue"
+    document.body.style.backgroundColor= "midnightBlue";
 }
 
 //clock mechanics: 
