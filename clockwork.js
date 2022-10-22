@@ -6,7 +6,7 @@ function sunFunction(){
     document.body.style.backgroundColor= "Goldenrod";
 }
 
-
+// This will draw the clock onto the Clock HTML Page as it is directly linked to the page:
 var canvas = document.getElementById("canvas");
             var ctx = canvas.getContext("2d");
             var radius = canvas.height / 2;
