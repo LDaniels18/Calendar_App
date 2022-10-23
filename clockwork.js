@@ -1,13 +1,13 @@
 //Dropdown Option Mechanincs:
 
 function moonFunction(){   
-    document.body.style.backgroundColor= "GoldenRod";
+    document.body.style.backgroundColor= "MidnightBlue";
 }
 function sunFunction(){
     document.body.style.backgroundColor= "Goldenrod";
 }
 function pacificFunction(){
-    document.body.style.backgroundColor= "Goldenrod";
+    document.body.style.backgroundColor= "SkyBlue";
 }
 function resetColor(){
     document.body.style.backgroundColor= "White"
