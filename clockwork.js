@@ -10,7 +10,7 @@ function pacificFunction(){
     document.body.style.backgroundColor= "Goldenrod";
 }
 function resetColor(){
-    document.body.style.backgroundColor= "#fff"
+    document.body.style.backgroundColor= "White"
 }
 
 //clock mechanics: 
