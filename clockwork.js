@@ -9,6 +9,9 @@ function sunFunction(){
 function pacificFunction(){
     document.body.style.backgroundColor= "Goldenrod";
 }
+function resetColor(){
+    document.body.style.backgroundColor= "#fff"
+}
 
 //clock mechanics: 
 
