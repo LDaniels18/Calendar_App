@@ -89,7 +89,6 @@
           document.getElementById("canvas").remove();
           this.remove();
         
-      
     
         }
 
