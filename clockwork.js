@@ -1,27 +1,15 @@
-//Dropdown Option Mechanincs:
-
-function moonFunction(){   
-    document.body.style.backgroundColor= "MidnightBlue";
-}
-function sunFunction(){
-    document.body.style.backgroundColor= "Goldenrod";
-}
-function pacificFunction(){
-    document.body.style.backgroundColor= "SkyBlue";
-}
-function resetColor(){
-    document.body.style.backgroundColor= "White"
-}
 
 //clock mechanics: 
 
 // This will draw the clock onto the Clock HTML Page as it is directly linked to the page:
-var canvas = document.getElementById("canvas");
+    
+            var canvas = document.getElementById("canvas");
             var ctx = canvas.getContext("2d");
             var radius = canvas.height / 2;
             ctx.translate(radius, radius);
             radius = radius * 0.90
             setInterval(drawClock, 1000);
+    
 
             function drawClock() {
                 drawFace(ctx, radius);
@@ -96,6 +84,32 @@ var canvas = document.getElementById("canvas");
             ctx.stroke();
             ctx.rotate(-pos);
         }
+
+        function eraseCLock(){
+          document.getElementById("canvas").remove();
+          this.remove();
+            
+        }
+
+
+        //Dropdown Option Mechanincs:
+
+function moonFunction(){   
+    document.body.style.backgroundColor= "MidnightBlue";
+    eraseCLock();
+}
+function sunFunction(){
+    document.body.style.backgroundColor= "Goldenrod";
+}
+function pacificFunction(){
+    document.body.style.backgroundColor= "SkyBlue";
+
+   
+   
+}
+function resetColor(){
+    document.body.style.backgroundColor= "White"
+}
 
         //borrowed from GeeksForGeeks__________________________________
        

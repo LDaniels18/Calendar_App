@@ -18,7 +18,8 @@
     <body>
         <div class="container-fluid">
             <center><h1 class="mt-4">Clock</h1></center>
-            <center><canvas id="canvas" width="400" height="400" style="background-color:rgb(255, 255, 255)"> </canvas></center>
+            <!-- Canavas is the section in body that will house the clock.... we begin by drawing the clock everytime we load the page.  -->
+            <center><canvas id="canvas" width="400" height="400" style="background-color:rgba(255, 255, 255, 0)" onload="drawClock()"> </canvas></center>
         
             <p>So we may need to import a Global timer sort of thing</p>
             <p>Timer, Countdown, Alarm, select different countries</p>
