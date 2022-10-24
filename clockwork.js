@@ -88,7 +88,9 @@
         function eraseCLock(){
           document.getElementById("canvas").remove();
           this.remove();
-            
+        
+      
+    
         }
 
 
@@ -102,8 +104,10 @@ function sunFunction(){
     document.body.style.backgroundColor= "Goldenrod";
 }
 function pacificFunction(){
+    drawClock();
     document.body.style.backgroundColor= "SkyBlue";
-
+    // canvas = document.getElementById("canvas");
+    
    
    
 }
