@@ -1,5 +1,14 @@
 
 //https://www.sliderrevolution.com/resources/html-calendar/
+
+function toJan() {
+  favicon.setAttribute("href", "assets/jan.ico"); 
+}
+
+function toFeb() {
+  favicon.setAttribute("href", "assets/feb.ico");
+}
+
 var app = {
     settings: {
       container: $('.calendar'),
