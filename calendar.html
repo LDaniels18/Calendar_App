@@ -2,7 +2,7 @@
 <html lang="en">
 
     <!-- https://www.geeksforgeeks.org/how-to-change-favicon-dynamically/ -->
-    <head>
+    <head >
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
@@ -10,16 +10,15 @@
 
         <title>Calendar</title>
         
-        <link id="favicon" rel="icon" href="assets/jan.ico" sizes="16x16" type="image/x-icon">
-
-        <link href="css/styles.css" rel="stylesheet" />
+        <link id="favicon" rel="icon" sizes="16x16" type="image/x-icon" > </link>
+        <link href="css/styles.css" rel="stylesheet" ></link>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css" rel="stylesheet"></link>
 
     </head>
 
-    <body>
+    <body onload="toMonth()">
         
-        <div class="container">
+        <div class="container" >
             <div class="calendar">
               <div class="front">
                 <div class="current-date">
@@ -115,12 +114,10 @@
                   </div>
                 </div>
                 
-                <button class="btn1" type="button" onmouseover="toJan()">
+                <!-- <button class="btn1" type="button" onmouseover="toMonth()">
                   Jan
-                </button>
-                <button class="btn2" type="button" onmouseover="toFeb()">
-                  Feb
-                </button>
+                </button> -->
+                
 
                 <div class="actions">
                   <button class="save">
