@@ -32,10 +32,7 @@ function toMonth() {
     favicon.setAttribute("href", "assets/dec.ico"); 
 }
 
-// function toFeb() {
 
-//   favicon.setAttribute("href", "assets/feb.ico");
-// }
 
 var app = {
     settings: {
