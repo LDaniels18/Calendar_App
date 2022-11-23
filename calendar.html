@@ -13,77 +13,111 @@
         <link id="favicon" rel="icon" sizes="16x16" type="image/x-icon" > </link>
         <link href="css/styles.css" rel="stylesheet" ></link>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css" rel="stylesheet"></link>
+        
+        <style> /* may want to put this in a css file but maybe not :) */
+        
+          .grid-container {
+            display: grid;
+            row-gap: 50px;
+            grid-template-columns: auto auto auto auto auto auto auto;
+            background-color: #2196F3;
+            padding: 10px;
+          }
+          
+          .weekday{
+            display: grid;
+            background-color: rgba(241, 173, 64, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            grid-template-columns: auto auto auto auto auto auto auto;
+            /* column-gap: 20px;
+            font-size: 30px; */
+            text-align: center;
+          }
+          .grid-item { /* change gapping attributes*/
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+          }
+          </style>
 
     </head>
 
     <body onload="toMonth()">
-        
-        <div class="container" >
-            <div class="calendar">
-              <div class="front">
-                <div class="current-date">
+       
+       <script> //good to keep short scripts stright on html
+        const d = new Date();
+          // window.alert(d);
+         
+          const name = d.toLocaleString('default', {
+            month: 'long',
+            weekday: 'long',
+            day:'numeric'
+          });
+          // 
+          // window.alert(name);
+          document.writeln("<center><h1>"+name+"</h1></center>" );</script>
+               
 
-                  <center><h1>Friday 15th, January 2016 </h1></center>
-                  
-                </div>
-        
-                <div class="current-month"> <!-- This can be stagnat-->
-                  <ul class="week-days"> <center> MON TUE WED THU FRI SAT SUN </center> </ul>
-        
-                  <div class="weeks">
-                    <div class="first">
-                      <span class="last-month">28</span>
-                      <span class="last-month">29</span>
-                      <span class="last-month">30</span>
-                      <span class="last-month">31</span>
-                      <span>01</span>
-                      <span>02</span>
-                      <span>03</span>
-                    </div>
-        
-                    <div class="second">
-                      <span>04</span>
-                      <span>05</span>
-                      <span class="event">06</span>
-                      <span>07</span>
-                      <span>08</span>
-                      <span>09</span>
-                      <span>10</span>
-                    </div>
-        
-                    <div class="third">
-                      <span>11</span>
-                      <span>12</span>
-                      <span>13</span>
-                      <span>14</span>
-                      <span class="active">15</span>
-                      <span>16</span>
-                      <span>17</span>
-                    </div>
-        
-                    <div class="fourth">
-                      <span>18</span>
-                      <span>19</span>
-                      <span>20</span>
-                      <span>21</span>
-                      <span>22</span>
-                      <span>23</span>
-                      <span>24</span>
-                    </div>
-        
-                    <div class="fifth">
-                      <span>25</span>
-                      <span>26</span>
-                      <span>27</span>
-                      <span>28</span>
-                      <span>29</span>
-                      <span>30</span>
-                      <span>31</span>
+                    <div class="current-month">
+                      
+                   
+                      <h2 class="weekday" >
+                         <!-- somewhat permanent -->
+                      <div class="grid-item">m</div>
+                      <div class="grid-item">T</div>
+                      <div class="grid-item">W</div>
+                      <div class="grid-item">TH</div>
+                      <div class="grid-item">F</div>
+                      <div class="grid-item">S</div>
+                      <div class="grid-item">SU</div>
+                      </h2>
+                    
+               
+                      <div class="grid-container"> 
+                        <!-- This needs to be dynamic -->
+                        <div class="grid-item">1</div>
+                        <div class="grid-item">2</div>
+                        <div class="grid-item">3</div>  
+                        <div class="grid-item">4</div>
+                        <div class="grid-item">5</div>
+                        <div class="grid-item">6</div>  
+                        <div class="grid-item">7</div>
+                        <div class="grid-item">8</div>
+                        <div class="grid-item">9</div>  
+                        <div class="grid-item">10</div>  
+                        <div class="grid-item">11</div>  
+                        <div class="grid-item">12</div>  
+                        <div class="grid-item">13</div>  
+                        <div class="grid-item">14</div>  
+                        <div class="grid-item">15</div>  
+                        <div class="grid-item">16</div>  
+                        <div class="grid-item">17</div>  
+                        <div class="grid-item">18</div>  
+                        <div class="grid-item">19</div>  
+                        <div class="grid-item">20</div>  
+                        <div class="grid-item">21</div>  
+                        <div class="grid-item">22</div>  
+                        <div class="grid-item">23</div>  
+                        <div class="grid-item">24</div>  
+                        <div class="grid-item">25</div>  
+                        <div class="grid-item">26</div>  
+                        <div class="grid-item">27</div>  
+                        <div class="grid-item">28</div>  
+                        <div class="grid-item">29</div>  
+                        <div class="grid-item">30</div>  
+                        <!-- basecase :( -->
+
+                      </div>
+
+                       
                     </div>
                   </div>
-                </div>
-              </div>
-        
+               
+           
+
+            <!--
               <div class="back">
                 <input placeholder="What's the event?">
                 <div class="info">
@@ -117,9 +151,9 @@
                   </button>
                 </div>
               </div>
+        -->
         
-            </div>
-          </div>
+        
       
 
         <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
