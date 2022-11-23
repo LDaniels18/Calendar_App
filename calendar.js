@@ -2,20 +2,7 @@
 //https://www.sliderrevolution.com/resources/html-calendar/
 // https://www.w3schools.com/js/js_output.asp
 
-function titleDate(){
-  const d = new Date();
 
-  // window.alert(d);
- 
-  const name = d.toLocaleString('default', {
-    month: 'long',
-    weekday: 'long',
-    day:'numeric'
-  });
-  // 
-  // window.alert(name);
-  document.writeln("<center><h1>"+name+"</h1></center>" ); //'+' lets us write into documents with js vars
-}
 
 function toMonth() {//favicon changes permonth
   const d = new Date();
