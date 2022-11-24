@@ -8,13 +8,52 @@
             var radius = canvas.height / 2;
             ctx.translate(radius, radius);
             radius = radius * 0.90
-            setInterval(drawClock, 1000);
+            setInterval(drawClock, 1000); //THIS IS WHAT WE NEED TO MANIPULATE
     
 
-            function drawClock() {
+            function drawClockEast(){
+               
+                windown.alert("inn this mf");
+                // drawFace(ctx, radius);
+                // drawNumbers(ctx, radius);
+                // drawTimeEast(ctx, radius);
+            }
+
+            function drawClock() { //default based on location
+                
                 drawFace(ctx, radius);
                 drawNumbers(ctx, radius);
                 drawTime(ctx, radius);
+            }
+
+
+            function drawTimeEast(ctx, radius){ //editing timezones
+
+                var now = new Date();
+                //hour
+                var changed_TZ = now.getTimezoneOffset()
+                if(changed_TZ != 360){// identify timezone
+                    now.getTimezoneOffset = 360;
+                    windown.alert(now.getHours());
+                } 
+                
+                var hour = now.getHours();
+                var minute = now.getMinutes();
+                var second = now.getSeconds();
+
+                hour=hour%12;
+                hour=(hour*Math.PI/6)+
+                (minute*Math.PI/(6*60))+
+                (second*Math.PI/(360*60));
+
+
+                drawHand(ctx, hour, radius*0.5, radius*0.07);
+                //minute
+                minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+                drawHand(ctx, minute, radius*0.8, radius*0.07);
+                // second
+                second=(second*Math.PI/30);
+                drawHand(ctx, second, radius*0.9, radius*0.02);
             }
 
             function drawFace(ctx, radius) {
@@ -61,6 +100,7 @@
             var minute = now.getMinutes();
             var second = now.getSeconds();
             //hour
+            
             hour=hour%12;
             hour=(hour*Math.PI/6)+
             (minute*Math.PI/(6*60))+
@@ -85,34 +125,45 @@
             ctx.rotate(-pos);
         }
 
-        function eraseCLock(){
-          document.getElementById("canvas").remove();
-          this.remove();
-        
-    
-        }
+        // function eraseClock(){
+        //   document.getElementById("canvas").hide();
+        // //   this.remove();
+        // }
 
 
         //Dropdown Option Mechanincs:
 
-function moonFunction(){   
-    document.body.style.backgroundColor= "MidnightBlue";
-    eraseCLock();
-}
-function sunFunction(){
-    document.body.style.backgroundColor= "Goldenrod";
-}
-function pacificFunction(){
-    drawClock();
-    document.body.style.backgroundColor= "SkyBlue";
-    // canvas = document.getElementById("canvas");
+    function moonFunction(){   
+        document.body.style.backgroundColor= "MidnightBlue";
+        // eraseClock();
+    }
+    function sunFunction(){
+        document.body.style.backgroundColor= "Goldenrod";
+    }
+    function pacificFunction(){
+        // drawClock();
+        // ctx.translate(radius, radius);
+        document.body.style.backgroundColor= "SkyBlue";
+        document.drawClock();
+        // canvas = document.getElementById("canvas");
     
-   
-   
-}
-function resetColor(){
-    document.body.style.backgroundColor= "White"
-}
+    }
+
+    function easternFunction(){
+        // drawClock();
+        // ctx.translate(radius, radius);
+        document.body.style.backgroundColor= "black";
+        //
+        
+        drawClockEast();
+        
+
+        
+        // canvas = document.getElementById("canvas");
+    }
+    function resetColor(){
+        document.body.style.backgroundColor= "White"
+    }
 
         //borrowed from GeeksForGeeks__________________________________
        
