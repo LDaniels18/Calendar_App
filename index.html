@@ -10,11 +10,60 @@
         <title>Home Page</title>
         <!-- Favicon THIS STUFF IS DEFINES THE TAB-->
         <link rel="icon" type="image/x-icon" href="assets/favicon2.ico" />
-     
         <link href="css/styles.css" rel="stylesheet" />
-    </head>
 
+        <script src='https://d3js.org/d3.v4.min.js'></script>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        
+        <script src="scripts.js"></script>
+        
+        
+    </head>
+    
     <body>
+        
+        <script> //introduction to Animations http://127.0.0.1:5500/Calendar_App/index.html
+            var svg = d3.select("body")
+                .append("svg")
+                .attr("width", 500)
+                .attr("height", 500);
+        
+        
+            var bar1 = svg.append("rect")
+                .attr("fill", "blue")
+                .attr("x", 100)
+                .attr("y", 20)
+                .attr("height", 20)
+                .attr("width", 10)
+        
+            var bar2 = svg.append("rect")
+                .attr("fill", "blue")
+                .attr("x", 120)
+                .attr("y", 20)
+                .attr("height", 20)
+                .attr("width", 10)
+        
+            update();
+        
+        function update() {
+            bar1.transition()
+                .ease(d3.easeLinear)
+                .duration(2000)
+                .attr("height",100)
+        
+            bar2.transition()
+                .ease(d3.easeLinear)
+                .duration(2000)
+                .delay(2000)
+                .attr("height",100)
+        }
+        </script>
+        <div>
+        
+        </div>
+
         <div class="d-flex" id="wrapper">
             <!-- Sidebar-->
             <div class="border-end bg-white" id="sidebar-wrapper">
@@ -64,9 +113,9 @@
                 </div>
             </div>
         </div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="scripts.js"></script>
+
+         <!-- animations-->
+
+
     </body>
 </html>

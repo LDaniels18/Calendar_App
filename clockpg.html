@@ -21,7 +21,7 @@
             <!-- Canavas is the section in body that will house the clock.... we begin by drawing the clock everytime we load the page.  -->
             <center><canvas id="canvas" width="400" height="400" style="background-color:rgba(255, 255, 255, 0)" onload="drawClock()"> </canvas></center>
         
-            <p>So we may need to import a Global timer sort of thing</p>
+            <p>So we may need to import a Global timer sort of change</p>
             <p>Timer, Countdown, Alarm, select different countries</p>
 
             <div class="btn-group">
@@ -33,7 +33,8 @@
                 <div class="dropdown-menu">
                   <a class="dropdown-item" onclick="pacificFunction()">Pacific Time</a>
                     
-                  <a class="dropdown-item">Eastern Time</a>
+                  <a class="dropdown-item" onclick = "drawClockEast()">Eastern Time</a>
+
                   <a class="dropdown-item">Central Time</a>
 
                   <!-- Creates the line divider in the button group -->
